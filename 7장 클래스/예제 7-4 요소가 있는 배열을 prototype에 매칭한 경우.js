@@ -3,8 +3,14 @@ var Grade = function() {
     for (var i = 0; i < args.length; i++) {
         this[i] = args[i];
     }
-    this.lnegth = args.length;
+    this.length = args.length;
 }
-Grade.prototype = [];
+Grade.prototype = ['a', 'b'];
 var g = new Grade(100, 80);
-console.dir(Grade.prototype.__proto__);
+g.push(90, 20);
+
+console.log(g);
+
+delete g.length;
+g.push(70);
+console.log(g);
